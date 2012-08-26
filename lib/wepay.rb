@@ -4,6 +4,7 @@ require 'json'
 require 'net/http'
 require 'net/https'
 require 'cgi'
+require '../lib/config.rb'
 
 =begin
 helps you make API calls to the WePay API v2
