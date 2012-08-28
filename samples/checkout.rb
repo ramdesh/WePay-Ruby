@@ -5,6 +5,7 @@ require '../lib/wepay.rb'
 wepay = WePay.new(WePayConfig::CLIENT_ID, WePayConfig::CLIENT_SECRET)
 redirect_uri = 'http://curdbee.com'
 url = wepay.oauth2_authorize_url(redirect_uri)
+puts url
 uri = URI.parse(url)
 http = Net::HTTP.new(uri.host, uri.port)
 req = Net::HTTP::Get.new(uri.request_uri)
